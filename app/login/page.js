@@ -6,6 +6,10 @@ import { setCookie } from "cookies-next";
 const LoginPage = () => {
   const router = useRouter();
   return (
+    <main >
+    <img className="pb-5" src="/images/hero1.png" alt="" />
+    <div className="flex flex-col justify-center items-center text-center space-y-5">
+    <h1 className="text-3xl border border-y-black w-[10rem] border-x-transparent ">LOGIN</h1>
     <Formik
       initialValues={{
         email: "",
@@ -38,20 +42,21 @@ const LoginPage = () => {
       }}
     >
       {({ status }) => (
-        <Form>
-          <div>
-            <label htmlFor="email"> Email:</label>
+        <Form className="space-y-5 pb-[20rem]">
+            <p>indtast dine oplysninger her:</p>
+          <div className="border border-black">
             <Field name="email" type="text" />
           </div>
-          <div>
-            <label htmlFor="email"> Password:</label>
+          <div className="border border-black">
             <Field name="password" type="password" />
           </div>
-          <button type="submit">Log in</button>
+          <button className="bg-blue-500 w-[10rem] h-[2.5rem] text-white text-xl " type="submit">Log in</button>
           {status && <div className="bg-red-600 text-white p-8">{status}</div>}
         </Form>
       )}
     </Formik>
+    </div>
+    </main>
   );
 };
 
