@@ -20,7 +20,7 @@ const Navigation = () => {
         <Link href="/">Forside</Link> &nbsp;
         <Link href="/">Events</Link>&nbsp;
         <Link href="/">Camps</Link>&nbsp;
-        <Link href="/">Biletter</Link>&nbsp;
+        <Link href="billeter">Biletter</Link>&nbsp;
         <Link href="/">Praktisk info</Link>&nbsp;
        {token &&  <Link href="/">Mit program</Link>}
         {token ? (
