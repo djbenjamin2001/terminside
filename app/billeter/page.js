@@ -13,19 +13,19 @@ const BilletPage = () => {
         </div>
 
         <article className="bg-[#EFEFEF] p-[1rem] w-[55rem] flex flex-row justify-between   ">
-          <p>ALM. PARTOUTBILLET</p>
+          <p>ALM.PARTOUTBILLET</p>
           &nbsp;
           <div className="flex">
-            <p>1111 DKK</p>
-            <button>KØB BILLET</button>
+            <p>1495 DKK</p>
+           <Link href={`koeb?antal=1&billet=ALM.PARTOUTBILLET&pris=1495`}><button>KØB BILLET</button></Link> 
           </div>
         </article>
 
         <article className="bg-[#CFCFCF] p-[1rem] w-[55rem] flex justify-between">
-          <p>PARTOUTBILLET DELUXE</p> &nbsp;
+          <p>PARTOUTBILLET-DELUXE</p> &nbsp;
           <div className="flex">
-            <p>1111 DKK</p>
-            <button>KØB BILLET</button>
+            <p>1945 DKK</p>
+            <Link href={`koeb?antal=1&billet=PARTOUTBILLET-DELUXE&pris=1495`}><button>KØB BILLET</button></Link> 
           </div>
         </article>
       </section>
@@ -38,16 +38,16 @@ const BilletPage = () => {
           <p>ONSDAG</p>
           &nbsp;
           <div className="flex">
-    <p>1111 DKK</p>  
-    <Link href={`koeb?antal=1&billet=onsdag&pris=1495`}><button>KØB BILLET</button></Link> 
+    <p>600 DKK</p>  
+    <Link href={`koeb?antal=1&billet=onsdag&pris=600`}><button>KØB BILLET</button></Link> 
     </div>
 
         </article>
         <div className="bg-[#CFCFCF] p-[1rem] w-[55rem] flex justify-between">
           <p>TORSDAG</p> &nbsp;
           <div className="flex">
-    <p>1111 DKK</p>  
-    <Link href={`koeb?antal=1&billet=torsdag&pris=1495`}><button>KØB BILLET</button></Link> 
+    <p>600 DKK</p>  
+    <Link href={`koeb?antal=1&billet=torsdag&pris=600`}><button>KØB BILLET</button></Link> 
     </div>
 
         </div>
@@ -56,19 +56,16 @@ const BilletPage = () => {
           <p>FREDAG</p>
           &nbsp;
           <div className="flex">
-    <p>1111 DKK</p>  
-   <Link href={`koeb?antal=1&billet=fredag&pris=1495`}><button>KØB BILLET</button></Link> 
+    <p>600 DKK</p>  
+   <Link href={`koeb?antal=1&billet=fredag&pris=600`}><button>KØB BILLET</button></Link> 
     </div>
         </article>
 
         <article className="bg-[#CFCFCF] p-[1rem] w-[55rem] flex justify-between">
           <p>LØRDAG</p> &nbsp;
           <div className="flex"> 
-          <label htmlFor="number">
-          <input type="number" name="number"  />
-          </label>
-    <p>1111 DKK</p>  
-   <Link href={`koeb?antal=1&billet=lørdag&pris=1495`}><button>KØB BILLET</button></Link> 
+    <p>600 DKK</p>  
+   <Link href={`koeb?antal=1&billet=lørdag&pris=600`}><button>KØB BILLET</button></Link> 
   
     </div>
         </article>
