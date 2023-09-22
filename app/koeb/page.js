@@ -80,6 +80,7 @@ const KoebPage = ({ searchParams: { billet, pris } }) => {
           postnumber: "",
           password: "",
           confirmPassword: "",
+          selectField: "",
         }}
         onSubmit={(values, { setStatus, setSubmitting }) => {
           if (values.password !== values.confirmPassword) {
@@ -101,7 +102,8 @@ const KoebPage = ({ searchParams: { billet, pris } }) => {
               city: values.city,
               postnumber: values.postnumber,
               adress: values.adress,
-              ticketpickup:values.ticketpickup
+              ticketpickup:values.ticketpickup,
+              selectField: values.selectField
             }),
           })
             .then((res) => {
@@ -126,6 +128,14 @@ const KoebPage = ({ searchParams: { billet, pris } }) => {
             <p>indtast dine oplysninger her:</p>
             <div className="flex gap-[35rem]">
               <div>
+              <div className="border border-black">
+                <label htmlFor="selectField">vælg en kamp</label>
+                <Field as="select" name="selectField">
+                  <option value="Camp colorit">Camp colorit</option>
+                  <option value="Camp Kultunaut">Camp Kultunaut</option>
+                  <option value="Camp De Luxe">Camp De Luxe</option>
+                </Field>
+              </div>
                 <div className="flex flex-col">
                   <label htmlFor="email">Email:</label>
                   <Field
