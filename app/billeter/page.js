@@ -25,7 +25,7 @@ const BilletPage = () => {
           <p>PARTOUTBILLET-DELUXE</p> &nbsp;
           <div className="flex">
             <p>1945 DKK</p>
-            <Link href={`koeb?antal=1&billet=PARTOUTBILLET-DELUXE&pris=1495`}><button>KØB BILLET</button></Link> 
+            <Link href={`koeb?antal=1&billet=PARTOUTBILLET-DELUXEæ&pris=1495`}><button>KØB BILLET</button></Link> 
           </div>
         </article>
       </section>
