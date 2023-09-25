@@ -8,7 +8,7 @@ const LoginPage = () => {
   return (
     <main >
     <img className="pb-5" src="/images/hero1.png" alt="" />
-    <div className="flex flex-col justify-center items-center text-center space-y-5">
+    <section className="flex flex-col justify-center items-center text-center space-y-5">
     <h1 className="text-3xl border border-y-black w-[10rem] border-x-transparent ">LOGIN</h1>
     <Formik
       initialValues={{
@@ -55,7 +55,7 @@ const LoginPage = () => {
         </Form>
       )}
     </Formik>
-    </div>
+    </section>
     </main>
   );
 };
