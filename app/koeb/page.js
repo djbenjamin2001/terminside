@@ -126,8 +126,8 @@ const KoebPage = ({ searchParams: { billet, pris } }) => {
         {({ status }) => (
           <Form className=" flex flex-col space-y-5  justify-between items-start max-w-6xl mx-auto p-5">
             <p>indtast dine oplysninger her:</p>
-            <div className="flex gap-[35rem]">
-              <div>
+            <section className="flex gap-[35rem]">
+              <article>
               <div className="border border-black">
                 <label htmlFor="selectField">vælg en kamp</label>
                 <Field as="select" name="selectField">
@@ -197,8 +197,8 @@ const KoebPage = ({ searchParams: { billet, pris } }) => {
                 {status && (
                   <div className="bg-red-600 text-white p-8">{status}</div>
                 )}
-              </div>
-              <div>
+              </article>
+              <article>
                 <div>
                   <label htmlFor="ticketpickup">Jeg ønsker billetterne tilsendt</label>
                   <Field name="ticketpickup" type="radio" value="true" />
@@ -207,16 +207,16 @@ const KoebPage = ({ searchParams: { billet, pris } }) => {
                   <label htmlFor="ticketpickup">Jeg Printer Billeterne selv</label>
                   <Field name="ticketpickup" type="radio" value="false" />
                 </div>
-              </div>
-            </div>
-            <div className="flex justify-between">
+              </article>
+            </section>
+            <section className="flex justify-between">
               <button
                 className="bg-blue-500  w-[10rem] h-[2.5rem] text-white text-xl "
                 type="submit"
               >
                 SEND
               </button>
-            </div>
+            </section>
           </Form>
         )}
       </Formik>

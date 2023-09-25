@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react"; // Import useState and useEffect
+import { useState, useEffect } from "react";
 const getData = async () => {
   let res = await fetch("http://localhost:4000/bands");
   return await res.json();
@@ -40,33 +40,36 @@ const EventsPage = () => {
       <img src="/images/Hero3.png" alt="" />
       <h1 className="text-2xl text-center p-5">Line up</h1>
       <section className="flex justify-center p-5">
-      <div className="flex justify-evenly text-white  bg-[#333] p-[1rem] w-[80rem]">
-      <button
-        onClick={toggleSortering}
-        className="text-white"
-      >
-        {sorterOrder === "A-Å" ? "A-Å" : "Å-A"}
-      </button>
-      <p>RØD SCENE</p>
-      <p>BLÅ SCENE</p>
-      <p>LILLA SCENE</p>
-      </div >
+        <div className="flex justify-evenly text-white  bg-[#333] p-[1rem] w-[80rem]">
+          <button onClick={toggleSortering} className="text-white">
+            {sorterOrder === "A-Å" ? "A-Å" : "Å-A"}
+          </button>
+          <p>RØD SCENE</p>
+          <p>BLÅ SCENE</p>
+          <p>LILLA SCENE</p>
+        </div>
       </section>
-      <div className="max-w-4xl pb-5  gap-[2rem] grid grid-cols-3 mx-auto text-center">
+      <section className="max-w-4xl pb-5  gap-[2rem] grid grid-cols-3 mx-auto text-center">
         {sortedeBands.map((Bands) => (
-          <Link href={`/events/${Bands.id}`} key={Bands.id}>
-            <div className={`${stageFarver[Bands.stage.split(" ").join("")]}`}>
-              <img
-                className="w-[467px] h-[267px]"
-                src={Bands.image.src}
-                alt=""
-              />
-              <p>{Bands.name}</p>
-              <p>{Bands.day} Kl:{Bands.time}</p>
-            </div>
-          </Link>
+          <article>
+            <Link href={`/events/${Bands.id}`} key={Bands.id}>
+              <div
+                className={`${stageFarver[Bands.stage.split(" ").join("")]}`}
+              >
+                <img
+                  className="w-[467px] h-[267px]"
+                  src={Bands.image.src}
+                  alt=""
+                />
+                <p>{Bands.name}</p>
+                <p>
+                  {Bands.day} Kl:{Bands.time}
+                </p>
+              </div>
+            </Link>
+          </article>
         ))}
-      </div>
+      </section>
     </main>
   );
 };
