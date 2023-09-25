@@ -21,7 +21,7 @@ const Navigation = () => {
         <Link href="events">Events</Link>&nbsp;
         <Link href="/">Camps</Link>&nbsp;
         <Link href="billeter">Biletter</Link>&nbsp;
-        <Link href="/">Praktisk info</Link>&nbsp;
+        <Link href="praktiskinfo">Praktisk info</Link>&nbsp;
        {token &&  <Link href="/">Mit program</Link>}
         {token ? (
         <button onClick={handleLogout}>logout</button>
